@@ -1,0 +1,238 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+    font-size: 12.5px
+}
+
+.container {
+    height: 100%;
+    background: #E5F7FF;
+}
+
+.navbar {
+    background: #005D52;
+    color: #EEE;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+#signin {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 40px;
+    background-color: #e5ddd5;
+}
+
+#signin .form-in {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#signin .form-in .bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.06;
+    background-image: url('../images/bg-chat.png');
+}
+
+#signin .form-group {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #005D52;
+    color: #EEE;
+}
+
+#signin .form-group label {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+
+#signin .form-group input {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 0;
+    background-color: #eee;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 0;
+    width: 90%;
+}
+
+#signin .form-group button {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 0;
+    background-color: #eee;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 10%;
+}
+
+#chat {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+#chat .messages {
+    position: relative;
+    background-color: #e5ddd5;
+    height: calc(100% - 57px);
+    flex-shrink: 2;
+    padding: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#chat .messages .bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.06;
+    background-image: url('../images/bg-chat.png');
+}
+
+
+#chat .messages .message,
+#chat .messages .my-message,
+#chat .messages .join, #chat .messages .disconnect {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    padding-right: 10%;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#chat .messages .my-message {
+    float: right;
+    padding-right: 0;
+    padding-left: 10%;
+}
+
+#chat .messages .join, #chat .messages .disconnect {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#chat .messages .join .join-in, #chat .messages .disconnect .disconnect-in {
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 0.9em;
+    margin: 0 auto;
+    color: rgba(69, 90, 100, .95);
+    background-color: rgba(225, 245, 254, .92);
+    padding: 10px;
+}
+
+#chat .messages .disconnect .disconnect-in {
+    color: rgba(121, 97, 90, 0.95);
+    background-color: rgba(254, 233, 225, 0.92);
+}
+
+#chat .messages .message .tail-container {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 12px;
+    height: 19px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -12px;
+    background-image: url('../images/tail.png')
+}
+
+#chat .messages .message .message-in {
+    display: block;
+    float: left;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+}
+
+#chat .messages .my-message .tail-container {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 12px;
+    height: 19px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -12px;
+    background-image: url('../images/mytail.png')
+}
+
+#chat .messages .my-message .message-in {
+    display: block;
+    float: right;
+    padding: 10px;
+    background-color: #DCF8C6;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+}
+
+
+#chat .messages .message h4 {
+    margin: 0;
+}
+
+#chat form .form-group {
+    background-color: #005D52;
+    text-align: center;
+    padding: 10px;
+}
+
+#chat form .form-group input {
+    background-color: #fff;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto;
+    border: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 85vw;
+}
+
+#chat form .form-group button {
+    padding: 10px;
+    margin: 0 auto;
+    border: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #eee;
+    width: 10vw;
+}

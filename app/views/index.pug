@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title AgeTalkUp!
+        script(src="https://kit.fontawesome.com/186336d17c.js")
+        script(src="/socket.io/socket.io.js")
+        link(rel="stylesheet", href="css/style.css")
+    body
+        section.container
+            nav.navbar
+                h1 AgeTalkUp!
+            
+            form#signin
+                .form-in
+                    .bg
+                    .form-group
+                        label(for="inputUser") Bem vindo ao AgeTalkUp! 
+                        input(type="text" name="user" id="inputUser", placeholder="Entre com seu nome...")
+                        button(type="submit") 
+                            i.fa.fa-sign-in-alt.fa-lg &nbsp;
+            #chat
+                .messages
+                    .bg &nbsp;
+                    
+                form#send
+                    .form-group
+                        input(type="text" name="message" id="inputMessage" placeholder="Envie uma mensagem...")
+                        button(type="submit") 
+                            i.fa.fa-arrow-right.fa-lg &nbsp;
+
+        script(src="js/functions.js")
+            
