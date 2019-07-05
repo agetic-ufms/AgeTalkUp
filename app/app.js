@@ -1,19 +1,17 @@
 const express = require('express')
 const app = express()
+
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
 app.use('/', express.static('public'))
-
 app.set('views', __dirname + '/views')
 app.set('view engine', 'pug')
-
 app.get('/', function (req, res) {
     res.render('index')
 })
 
 let clients = {}
-
 io.on("connection", (client) => {
     client.on("join", function (name) {
         console.log("Joined: " + name);
@@ -36,6 +34,5 @@ io.on("connection", (client) => {
         }
     });
 })
-
 
 server.listen(3030);

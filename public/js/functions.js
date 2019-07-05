@@ -45,6 +45,7 @@ const join = (user) => {
         entrou no chat</span></div>`
 
     document.querySelector('#chat .messages').innerHTML += template
+    document.querySelector('#chat .messages').scrollTop = document.querySelector('#chat .messages').scrollHeight
 }
 
 const disconnect = (user) => {
@@ -53,6 +54,7 @@ const disconnect = (user) => {
         saiu do chat</span></div>`
 
     document.querySelector('#chat .messages').innerHTML += template
+    document.querySelector('#chat .messages').scrollTop = document.querySelector('#chat .messages').scrollHeight
 }
 
 const addMessage = (user, message) => {
@@ -61,6 +63,7 @@ const addMessage = (user, message) => {
     <h4>${user}</h4><p>${message}</p></span></div>`
 
     document.querySelector('#chat .messages').innerHTML += tamplate
+    document.querySelector('#chat .messages').scrollTop = document.querySelector('#chat .messages').scrollHeight
 }
 
 const addMyMessage = (message) => {
@@ -69,11 +72,13 @@ const addMyMessage = (message) => {
     <p>${message}</p></span></div>`
 
     document.querySelector('#chat .messages').innerHTML += template
+    document.querySelector('#chat .messages').scrollTop = document.querySelector('#chat .messages').scrollHeight
 }
 
 window.addEventListener('load', changeView)
 document.getElementById('signin').addEventListener('submit', signin)
 document.getElementById('send').addEventListener('submit', send)
+
 socket.on('join', user => join(user))
 socket.on('disconnect', user => disconnect(user))
 socket.on('send', (user, message) => addMessage(user, message))

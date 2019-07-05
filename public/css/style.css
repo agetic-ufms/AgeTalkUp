@@ -112,7 +112,7 @@ h1 {
 }
 
 #chat .messages .bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -224,7 +224,7 @@ h1 {
     border: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    width: 85vw;
+    width: calc(90vw - 20px);
 }
 
 #chat form .form-group button {
