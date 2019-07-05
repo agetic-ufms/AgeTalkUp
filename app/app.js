@@ -27,8 +27,8 @@ io.on("connection", (client) => {
     });
 
     client.on("disconnect", function () {
-        console.log("Disconnect: " + clients[client.id]);
         if (clients[client.id]) {
+            console.log("Disconnect: " + clients[client.id]);
             io.emit("disconnect", clients[client.id]);
             delete clients[client.id];
         }
